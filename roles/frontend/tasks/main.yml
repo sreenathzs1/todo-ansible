@@ -5,9 +5,9 @@
     state: present
 
 - name: Create Frontend Directory
-      file:
-        path: /var/www/html/frontend
-        state: directory
+  file:
+    path: /var/www/html/frontend
+    state: directory
 
 - name: Clone GIT Repo from hub
   git:
@@ -25,10 +25,10 @@
     chdir: "/var/www/html/frontend"  
 
 - name: Replace content
-      replace:
-        path: /etc/nginx/sites-enabled/default
-        regexp: root /var/www/html;
-        replace: root /var/www/html/frontend/dist;
+  replace:
+    path: /etc/nginx/sites-enabled/default
+    regexp: root /var/www/html;
+    replace: root /var/www/html/frontend/dist;
 
 
 - name: Start Nginx
@@ -39,16 +39,16 @@
 
 
 - name: Copy systemd frontend npm start Service file
-      template:
-         src: npmstart.service
-         dest: /etc/systemd/system/npmstart.service
-         mode: 0644
-         owner: root
-         group: root
+  template:
+    src: npmstart.service
+    dest: /etc/systemd/system/npmstart.service
+    mode: 0644
+    owner: root
+    group: root
 
-    - name: Start npm  Service
-      systemd:
-        name: npmstart.service
-        daemon_reload: yes
-        state: restarted
-        enabled: yes
+- name: Start npm  Service
+  systemd:
+    name: npmstart.service
+    daemon_reload: yes
+    state: restarted
+    enabled: yes
