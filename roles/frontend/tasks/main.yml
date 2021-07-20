@@ -18,7 +18,7 @@
 - name: NPM INSTALL latest version
   npm:
     path: /var/www/html/frontend
-    state: latest
+    state: present
 
 - name: npm build
   command: npm run build
