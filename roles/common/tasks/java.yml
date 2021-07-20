@@ -9,11 +9,12 @@
     name: maven
     update_cache: yes
     state: present
+    
 - name: Remove static files
   file:
-    path: /home/ubuntu
+    path: /home/ubuntu/users
     state: absent
-    
+
 - name: Import Download GIT REPOS
   include_role:
     name: common
