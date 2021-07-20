@@ -1,8 +1,9 @@
 - name: Install dependencies
   apt:
-    name: "{{packages}}"
+    name: npm
     update_cache: yes
     state: present
+
 
 - name: Create Frontend Directory
   file:
