@@ -1,6 +1,6 @@
 packages:
-   - nginx
-   - nodejs
-   - npm
-   - node-node-sass
+  - nginx
+  - nodejs
+  - npm
+  - node-node-sass
 
