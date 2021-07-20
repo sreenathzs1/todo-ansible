@@ -1,4 +1,4 @@
 - name: Clone GIT Repo
   git:
     repo: https://github.com/sreenathzs1/{{COMPONENT}}.git
-    dest: /home/ubuntu/{{COMPONENT}}
+    dest: /root/{{COMPONENT}}
