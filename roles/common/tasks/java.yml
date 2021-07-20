@@ -9,7 +9,11 @@
     name: maven
     update_cache: yes
     state: present
-
+- name: Remove static files
+  file:
+    path: /home/ubuntu
+    state: absent
+    
 - name: Import Download GIT REPOS
   include_role:
     name: common
@@ -19,6 +23,6 @@
 - name: Import Systemd Serive from Common role
   include_role:
     name: common
-    tasks_from: setup-systemd.yml
+    tasks_from: systemd_files.yml
 
 

@@ -17,10 +17,7 @@
     path: /var/www/html/frontend
     state: directory
 
-- name: Remove static files
-  file:
-    path: /var/www/html/frontend
-    state: absent
+
 
 - name: Clone GIT Repo from hub
   git:
