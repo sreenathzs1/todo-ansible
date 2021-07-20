@@ -1,3 +1,10 @@
+
+- name: Install dependencies
+  apt:
+    name: nginx
+    update_cache: yes
+    state: present
+
 - name: Install dependencies
   apt:
     name: npm
@@ -14,7 +21,7 @@
   file:
     path: /var/www/html/frontend
     state: absent
-    
+
 - name: Clone GIT Repo from hub
   git:
     repo: https://github.com/sreenathzs1/frontend.git
