@@ -21,6 +21,10 @@
     name: common
     tasks_from: git_repos.yml
 
+- name: MAVEN PAckAGE
+  command: mvn clean package
+  args:
+    chdir: "/root/users"
 
 - name: Import Systemd Serive from Common role
   include_role:
