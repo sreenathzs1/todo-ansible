@@ -1,0 +1,106 @@
+- name: Import Java & Maven From Common role
+  include_role:
+    name: common
+    tasks_from: java
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# - name: Install JAVA-8
+#   apt:
+#     name: openjdk-8-jdk-headless
+#     update_cache: yes
+#     state: present
+
+# - name: Install MAVEN
+#   apt:
+#     name: maven
+#     update_cache: yes
+#     state: present
+    
+# - name: ADd todo user
+#   user:
+#     name: todo
+#     shell: /bin/bash
+
+# - name: Download Users from Nexus
+#   get_url:
+#     url: http://172.31.7.112:8081/repository/users/users-{{APP_VERSION}}.zip
+#     dest: /tmp/
+#     username: admin
+#     password: admin123
+
+# - name: Import Download Nexus Artifacrs from Common role
+#   include_role:
+#     name: common
+#     tasks_from: download-nexus-Artifacts.yml
+
+
+ 
+
+# - name: Import Systemd Serive from Common role
+#   include_role:
+#     name: common
+#     tasks_from: setup-systemd.yml
+
+# - name: Setup SystemD Service
+#   include_tasks: setup-systemd.yml
+
+
+# - name: Create The Artifacts path
+#   file:
+#     path: /home/todo/users
+#     state: directory
+#     owner: todo
+#     group: todo
+
+# - name: Unzip the Downloaded Content
+#   unarchive:
+#       src: /tmp/{{COMPONENT}}.zip
+#       dest: /home/todo/users
+#       remote_src: yes
+#       owner: todo
+#       group: todo
