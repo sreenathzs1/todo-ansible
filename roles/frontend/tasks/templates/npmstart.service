@@ -1,0 +1,15 @@
+[Unit]
+Description=frontend service
+
+[Service]
+Type=simple
+User=root
+Environment=AUTH_API_ADDRESS=http://login.sree-cloud-devops.online:8080
+Environment=TODOS_API_ADDRESS=http://todo.sree-cloud-devops.online:8080
+WorkingDirectory=/var/www/html/frontend
+ExecStart=/usr/bin/npm start --no-warnings
+Restart=on-failure
+SyslogIdentifier=frontend
+
+[Install]
+WantedBy=multi-user.target

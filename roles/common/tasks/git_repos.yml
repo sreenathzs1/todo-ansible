@@ -1,0 +1,4 @@
+- name: Clone GIT Repo
+  git:
+    repo: https://github.com/sreenathzs1/frontend.git
+    dest: /home/ubuntu/{{COMPONENT}}

@@ -1,0 +1,6 @@
+packages:
+   - nginx
+   - nodejs
+   - npm
+   - node-node-sass
+
