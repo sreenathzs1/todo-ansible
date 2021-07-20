@@ -1,0 +1,109 @@
+- name: Import Golang From Common role
+  include_role:
+    name: common
+    tasks_from: go-lang
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# - name: Install dependencies
+#   apt:
+#    name: golang-go
+#    update_cache: yes
+#    state: present
+
+# - name: update Cache
+#   apt:
+#     update_cache: yes
+
+
+
+#- name: create Directory
+  #file:
+    #path: /home/ubuntu
+    #state: directory
+
+# - name: download golang tar 
+#   get_url:
+#       url: https://golang.org/dl/go1.15.5.linux-amd64.tar.gz
+#       dest: /tmp
+      
+ 
+# - name: Extract the Go tarball
+#   unarchive:
+#       src: /tmp/go1.15.5.linux-amd64.tar.gz
+#       dest: /usr/local
+#       remote_src: yes
+
+
+# - name: Download Login from Nexus
+#   get_url:
+#     url: http://172.31.7.112:8081/repository/login/login-{{APP_VERSION}}.zip
+#     dest: /tmp/
+#     username: admin
+#     password: admin123
+
+# - name: Import Download Nexus Artifacrs from Common role
+#   include_role:
+#     name: common
+#     tasks_from: download-nexus-Artifacts.yml
+
+
+
+
+# - name: Import Systemd Serive from Common role
+#   include_role:
+#     name: common
+#     tasks_from: setup-systemd.yml
+
+# - name: Setup SystemD Service
+#   include_tasks: setup-systemd.yml
+
+#- name: Unzip the Downloaded Content
+#   unarchive:
+#      src: /tmp/{{COMPONENT}}.zip
+#      dest: /home/ubuntu
+#      remote_src: yes
+
