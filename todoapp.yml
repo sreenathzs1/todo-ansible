@@ -3,13 +3,13 @@
   become: yes
   roles:
 
-    # - role: redis
-    #   tags: redis
-    #   when: COMPONENT == "redis"
+    - role: redis
+      tags: redis
+      when: COMPONENT == "redis"
 
-    # - role: todo
-    #   tags: todo
-    #   when: COMPONENT == "todo"
+    - role: todo
+      tags: todo
+      when: COMPONENT == "todo"
 
     - role: users
       tags: users
