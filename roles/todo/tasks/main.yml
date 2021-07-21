@@ -1,0 +1,86 @@
+- name: Import npm From Common role
+  include_role:
+    name: common
+    tasks_from: npm
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# - name: Install dependencies
+#   apt:
+#     name: npm
+#     update_cache: yes
+#     state: present
+
+# - name: Download todo from Nexus
+#   get_url:
+#     url: http://172.31.7.112:8081/repository/todo/todo-{{APP_VERSION}}.zip
+#     dest: /tmp/todo-0.0.13.zip
+#     username: admin
+#     password: admin123
+
+# - name: Import Download Nexus Artifacrs from Common role
+#   include_role:
+#    name: common
+#    tasks_from: download-nexus-Artifacts.yml
+
+# - name: create Directory
+#   file:
+#     path: /home/todo
+#     state: directory
+
+# - name: Unzip the Downloaded Content
+#   unarchive:
+#      src: /tmp/{{COMPONENT}}.zip
+#      dest: /home/todo
+#      remote_src: yes
+
+
+
+# - name: Import Systemd Serive from Common role
+#   include_role:
+#     name: common
+#     tasks_from: setup-systemd.yml
+
+# - name: Setup SystemD Service
+#   include_tasks: setup-systemd.yml

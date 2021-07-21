@@ -1,0 +1,33 @@
+- name: Install dependencies
+  apt:
+    name: npm
+    update_cache: yes
+    state: present
+
+# - name: Remove static files
+#   file:
+#     path: /home/todo
+#     state: absent
+
+# - name: Create  Directory
+#   file:
+#     path: /home/todo
+#     state: directory
+
+- name: Import Download GIT REPOS
+  include_role:
+    name: common
+    tasks_from: git_repos.yml
+
+
+- name: NPM INSTALL latest version
+  npm:
+    path: /root/todo
+    state: present
+
+- name: Import Systemd Serive from Common role
+  include_role:
+    name: common
+    tasks_from: setup-systemd.yml
+
+
